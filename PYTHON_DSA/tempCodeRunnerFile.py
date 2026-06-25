@@ -1,1 +1,0 @@
-print(acc1.display())
