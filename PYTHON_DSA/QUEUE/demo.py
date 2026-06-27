@@ -33,19 +33,7 @@ class Queue:
         return len(self.q) - self.front
 
 
-queue = Queue()
 
-queue.push(1)
-queue.push(2)
-queue.push(3)
-queue.push(4)
-
-print(queue.getFront())
-print(queue.size())
-print(queue.pop())
-print(queue.size())
-
-print(queue.getFront())
 
 
 ## Linked List implementaton of Queue:
@@ -93,17 +81,5 @@ class Queue:
         return self.length
 
 
-queue = Queue()
 
-queue.push(1)
-queue.push(2)
-queue.push(3)
-queue.push(4)
-
-print(queue.getFront())
-print(queue.size())
-print(queue.pop())
-print(queue.size())
-
-print(queue.getFront())
 

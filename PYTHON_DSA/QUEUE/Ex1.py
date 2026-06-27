@@ -1,0 +1,15 @@
+## Implementation of queue using deque class
+
+from collections import deque
+
+q = deque()
+
+q.append(10)
+q.append(20)
+q.append(30)
+
+print(q)
+q.popleft()
+print(q)
+q.pop()
+print(q)
