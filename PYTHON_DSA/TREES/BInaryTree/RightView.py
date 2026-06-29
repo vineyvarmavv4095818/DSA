@@ -1,6 +1,5 @@
-## ZigZag order traversal
-
 from collections import deque
+
 
 class Node:
     def __init__(self, data):
@@ -13,29 +12,27 @@ root.left = Node(2)
 root.right = Node(3)
 root.left.right = Node(5)
 root.left.left = Node(4)
-root.right.left = Node(6)
-root.right.right = Node(7)
-
 
 class Solution:
-    def zigZag(self, root):
-        
+    def rightView(self, root):
+
         if root is None:
             return []
         
         q = deque([root])
         ans = []
-        leftToRight = True
 
         while q:
 
             size = len(q)
-            level = []
 
-            for _ in range(size):
-                
+            for i in range(size):
+
                 node = q.popleft()
-                level.append(node.data)
+
+                # level kki last node
+                if i == size - 1:
+                    ans.append(node.data)
 
                 if node.left:
                     q.append(node.left)
@@ -43,15 +40,9 @@ class Solution:
                 if node.right:
                     q.append(node.right)
 
-            if not leftToRight:
-                level.reverse()
-
-            ans.extend(level)
-
-            leftToRight = not leftToRight
-
         return ans
+
 
 q = Solution()
 
-print(q.zigZag(root))
+print(q.rightView(root))
