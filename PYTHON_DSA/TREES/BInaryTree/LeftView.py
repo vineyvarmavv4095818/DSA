@@ -1,17 +1,6 @@
+## Left Side View Of Binary Tree:
+
 from collections import deque
-
-
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.left = None
-        self.right = None
-
-root = Node(1)
-root.left = Node(2)
-root.right = Node(3)
-root.left.right = Node(5)
-root.left.left = Node(4)
 
 class Solution:
     def rightView(self, root):
@@ -30,8 +19,7 @@ class Solution:
 
                 node = q.popleft()
 
-                # level ki last node
-                if i == size - 1:
+                if i == 0:
                     ans.append(node.data)
 
                 if node.left:
@@ -41,8 +29,3 @@ class Solution:
                     q.append(node.right)
 
         return ans
-
-
-q = Solution()
-
-print(q.rightView(root))
