@@ -12,5 +12,5 @@ heapq.heappush(h, 2)
 print(heapq.heappop(h))
 # print(heapq.heappop(h))
 
-print(heapq.nlargest(1, h))
-print(heapq.nsmallest(1, h))
+# print(heapq.nlargest(1, h))
+# print(heapq.nsmallest(1, h))
