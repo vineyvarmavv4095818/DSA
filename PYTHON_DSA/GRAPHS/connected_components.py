@@ -13,18 +13,17 @@ graph = [
     [0],
     [3],
     [2],
-    []
 ]
 
 visited = [False]*5
 
 count = 0
 
-for i in range(5):
+for i in range(len(graph)):
     if not visited[i]:
         dfs(i, graph, visited)
         count +=1
-        
+
 print(count)
 
 ## Leetcode
