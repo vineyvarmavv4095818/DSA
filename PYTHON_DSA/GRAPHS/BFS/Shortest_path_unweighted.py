@@ -1,4 +1,4 @@
-## Shortest Distance in Unweighted Graph
+## Shortest Path in Unweighted Graph
 
 from collections import deque
 
